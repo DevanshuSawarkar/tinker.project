@@ -60,7 +60,7 @@ ul{
     position: relative;
 }
 .menu li a:hover{
-    color: #181818;
+    color: #000000;
 }
 .nav-btns{
     display: flex;
@@ -259,7 +259,7 @@ ul{
     transition: all ease 0.3s;
 }
 .r-product-box:hover{
-    box-shadow: 2px 6px 16px rgba(0,0,0,0.05);
+    box-shadow: 2px 6px 16px rgba(0,0,0,0.75);
 }
 .r-product-box .r-product-img img{
     width: 100%;
@@ -366,7 +366,7 @@ ul{
     transition: all ease 0.3s;
 }
 .product-box:hover{
-    box-shadow: 2px 6px 16px rgba(0,0,0,0.05);
+    box-shadow: 2px 6px 16px rgba(0,0,0,0.75);
 }
 .product-box .product-img img{
     width: 100%;
