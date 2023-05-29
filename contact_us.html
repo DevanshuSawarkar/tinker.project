@@ -50,7 +50,7 @@
 <body>
     <div class="container">
         <h1>Contact Us</h1>
-        <form id="contact_us_form" >
+        <form id="contact_us_form" action = "https://formspree.io/f/xrgvvevw" method = "POST" >
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
@@ -66,37 +66,6 @@
             <input type="submit" value="Send" name="submit-btn">
         </form>
     </div>
-    <script>
-    //password : D03D8F7BFF1CB9157E61AC8276E4BF2F9AC0
-
-//SecureToken : 73ea2fb9-018d-4e64-b770-cf0a4e3ed695
-
-document.getElementById("contact_us_form").addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    var email = document.getElementById("contact_us_form").elements.namedItem("email").value;
-    var message = "Thank you for messaging your request our team will contact you soon.";
-    
-    Email.send({
-        SecureToken: "73ea2fb9-018d-4e64-b770-cf0a4e3ed695",
-        To: email,
-        From: "shopify.payment.manager@gmail.com",
-        Subject: "Message recieved.",
-        Body: message,
-    }).then(function (message) {
-        if (message === "OK") {
-            alert("You request has been placed.");
-            var form = document.getElementById("contact_us_form");
-                form.action = "https://formspree.io/f/xrgvvevw";
-                form.method = "POST";
-                form.submit();
-                document.getElementById("contact_us_form").reset();
-        } else {
-            alert("Failed to send your request, please try again later.");
-        }
-    });
-});
-    </script>
-</body>
+   </body>
 
 </html>
